@@ -5,24 +5,22 @@ def getSecondLargest(arr):
     n = len(arr)
     
     if n < 2:
-        return None  # Not enough elements
+        return None 
 
     largest = float('-inf')
     secondLargest = float('-inf')
 
     for num in arr:
         
-        # Update largest and second largest
         if num > largest:
             secondLargest = largest
             largest = num
-        
-        # Update only second largest
+            
         elif num > secondLargest and num != largest:
             secondLargest = num
 
     if secondLargest == float('-inf'):
-        return None  # No second largest (all elements equal)
+        return None 
 
     return secondLargest
 
