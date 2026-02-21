@@ -1,5 +1,5 @@
 # Question 7:
-# Rotate the array to the right by k positions (in-place).
+# Rotate the array to the right by k positions (in place).
 
 def reverse(arr, start, end):
     while start < end:
@@ -13,15 +13,12 @@ def rotateRight(arr, k):
     if n == 0:
         return arr
 
-    k = k % n  # Handle k > n
+    k = k % n 
 
-    # Step 1: Reverse entire array
     reverse(arr, 0, n - 1)
 
-    # Step 2: Reverse first k elements
     reverse(arr, 0, k - 1)
 
-    # Step 3: Reverse remaining elements
     reverse(arr, k, n - 1)
 
     return arr

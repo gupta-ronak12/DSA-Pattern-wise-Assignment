@@ -1,10 +1,9 @@
 # Question 6:
-# Check if an array is sorted in non-decreasing order
+# Check if an array is sorted in non Decreasing order
 
 def isSorted(arr):
     n = len(arr)
-
-    # Traverse the array and check order
+    
     for i in range(1, n):
         if arr[i - 1] > arr[i]:
             return False

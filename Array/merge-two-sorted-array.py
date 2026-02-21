@@ -8,7 +8,6 @@ def mergeArrays(arr1, arr2):
     i = j = 0
     merged = []
 
-    # Merge in sorted order
     while i < n and j < m:
         if arr1[i] <= arr2[j]:
             merged.append(arr1[i])
@@ -17,7 +16,6 @@ def mergeArrays(arr1, arr2):
             merged.append(arr2[j])
             j += 1
 
-    # Add remaining elements
     while i < n:
         merged.append(arr1[i])
         i += 1
@@ -34,4 +32,4 @@ if __name__ == "__main__":
     arr2 = [2, 4, 6, 8]
 
     result = mergeArrays(arr1, arr2)
-    print(*result) #check this code if correct or not
+    print(*result) 
